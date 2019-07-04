@@ -1,0 +1,38 @@
+<html>
+ <head>
+</head>
+     <body>
+
+	  
+	<input type="text" id="color_id" >  
+	<input type="button" value="Submit" onclick="setColor()"> 
+	<br><br><br>
+	<div class="row">
+	<div  id="d1" style="border : 1px solid blue; width:200px; height:200px; float: left; margin-left: 50px; " ></div>
+                      
+	<div  id="d2" style="border : 1px solid blue; width:200px; height:200px; float: right; margin-right: 700px;" ></div>
+	</div>
+     <script>
+         function setColor(){
+	let inputColor=document.getElementById("color_id").value;
+	d1.style.background = inputColor;
+                  
+	//console.log(d1.style.background);
+                }
+	
+	function fun(){
+	//divb=document.getElementById("d2").value;
+	let inputColor=document.getElementById("color_id").value;
+    d2.style.background = inputColor;
+    d1.style.background=null;
+	//console.log(d2.style.background);
+}
+
+document.getElementById("d1").addEventListener("click", fun);
+         // divb.addEventListener("click",fun);
+
+    </script>
+	  
+  
+      </body>
+</html>
