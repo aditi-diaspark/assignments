@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>callback</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+	<input type="text" id="tb1"><br><br>
+	<input type="text" id="tb2"><br><br>
+	<input type="text" id="tb3"><br><br>
+	<input type="text" id="tb4"><br><br>
+	<input type="submit" value="change color" id="btn1">
+	<input type="radio" id="rb1" value="red" >red
+	<input type="radio" id="rb2" value="green">blue
+	<input type="radio" id="rb3" value="blue">green
+
+
+	<script type="text/javascript">
+        $(document).ready(function(){
+        	$("#rb1").click(function(){
+        		$("#btn1").click(function(){
+        			$("#tb1").css({"background-color": "red"});
+        			$("#tb2").css({"background-color": "red"});
+        			$("#tb3").css({"background-color": "red"});
+        			$("#tb4").css({"background-color": "red"});
+        			$("#tb1").fadeOut(2000);
+        		})
+        	})
+
+            $("#rb2").click(function(){
+        		$("#btn1").click(function(){
+        			$("#tb2").css({"background-color": "blue"});
+        			$("#tb3").css({"background-color": "blue"});
+        			$("#tb4").css({"background-color": "blue"});
+        			$("#tb2").fadeOut(2000);
+        			$("#tb3").fadeOut(2000);
+        		})
+        	})
+
+        	$("#rb3").click(function(){
+        		$("#btn1").click(function(){
+        			$("#btn1").slideToggle();
+        		//	$("#box1").fadeIn(2000);
+        		//	$("#box2").fadeIn(2000);
+        		//	$("#box3").fadeIn(2000);
+        			$("#tb1").css({"background-color": "green"});
+        			$("#tb2").css({"background-color": "green"});
+        			$("#tb3").css({"background-color": "green"});
+        			$("#tb4").css({"background-color": "green"});
+
+        			
+        		})
+        	})
+
+        })
+    </script>
+
+
+
+</body>
+</html
